@@ -1,0 +1,822 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    min-height: 100vh;
+    background-size: cover; 
+    background-position: center;
+} 
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */}
+
+.lilletromme{
+    width: 800px;
+    left: 0%;
+    top: 12%;
+    position: absolute;
+
+}    
+
+.background-image {
+    display: block; /* Remove space below the image */
+    max-width: 100%; /* Make sure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.overlay-image {
+    position: absolute; /* Logoet forbliver oppe i toppen */
+    top: 90px;
+    height: auto; 
+  }
+
+  .overskriftboks{
+    margin-left: 400px;
+    margin-right:400px;
+    margin-top: 300px;
+    color: #000000;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 30px;
+    
+  }
+
+.førsteoverskrift {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5px;
+    border-radius: 20px;
+    color: #000000;
+}
+
+.textbox {
+    
+    
+}
+
+header{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background: #0B76DB;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    z-index: 1000;
+}
+
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+
+header .navbar ul {
+    list-style: none; /* Får prikkerne til at forsvinde */
+    text-transform: uppercase; 
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 10px;
+    color: #fff;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #3C91E2;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #3C91E2;
+    display: none; 
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+
+Header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+
+    header{
+        padding: 20px;
+    }
+
+    header label {
+        display: block;
+    }
+
+header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.1) ;
+    display:none;
+}
+
+header .navbar ul li{
+    width: 100%;
+
+}
+
+header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+}
+
+
+header .navbar ul li ul li{
+    background: #eee;
+}
+
+header .navbar ul li ul li ul{
+    width: 100%;
+    left: 0;
+}
+
+#menu-bar:checked ~ .navbar{
+    display: block;
+}
+
+}
+
+.magisktrommer{
+    position: absolute;
+    top: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 100%;
+    background-color: #095EAF;
+    text-align: left;
+    color: #fff;
+    border: 2px ;
+    font-size: 20px;
+}
+
+
+.drummerguy{
+    height: auto;
+    width: 600px;
+    float: right;
+    margin-right: 20px;
+    margin-top: -45px; 
+
+}
+
+.magiskoverskrift {
+    border: 2px;
+    padding-left: 10px;
+    padding-right: 300px;
+    margin-left: 20px;
+}
+
+.magisktekst{
+    position: absolute;
+    left: 2%;
+    right: 50%;
+    top: 12%;
+    text-align: justify;
+    font-size: 19px;
+}
+
+.hvidboks{
+    position: absolute;
+    top: 140%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    color: #000000;
+    border: 2px ;
+    font-size: 15px;
+}
+
+.citat{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.highlight{
+    color: #0B76DB;
+}
+
+.tid{
+    position: absolute;
+    height: auto;
+    width: 300px;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.idé {
+    position: absolute;
+    width: 300px;
+    left: 650px;
+    top: 100px;
+}
+
+.trommer{
+    position: absolute;
+    width: 350px;
+    right: 3%;
+    top: 140%;
+}
+
+.øveplano{
+    position: absolute;
+    top: 85%;
+    left: 6%;
+    bottom: 30px;
+    font-size: 30px;    
+    color: #0B76DB;
+}
+
+.øveplantekst{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 1150px;
+    margin-top: 380px;
+    font-size: 16px;
+
+}
+
+.ideo{
+    position: absolute;
+    top: 85%;
+    left: 46%;
+    bottom: 30px;
+    font-size: 30px;    
+    color: #0B76DB;
+}
+
+.idetekst {
+   position: absolute;
+   left: 42%;
+   top: 85%;
+   right: 40%;
+   text-align: center;
+   font-size: 16px;
+
+}
+
+.trommeo{
+    position: absolute;
+    top: 85%;
+    right: 7%;
+
+    bottom: 30px;
+    font-size: 30px;  
+    color: #0B76DB;
+}
+
+.trommetekst{
+    position: absolute;
+   left: 70%;
+   top: 85%;
+   text-align: center;
+   margin-right: 15px;
+   font-size: 16px;
+}
+
+.footersection{
+    position: absolute;
+    background-color: #112E4A;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    top: 1500px;
+}
+
+.tidoverskrift{
+    text-align: center;
+    color: #0B76DB;
+    font-size: 35px; 
+}
+
+.tidbaggrund{
+    position: absolute;
+    width: 100%;
+    height: 920px;
+    object-fit: cover;
+}
+
+.tidartikel1{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: justify;
+    color: #000000;
+    
+}
+
+.tid2{
+    position: absolute;
+    top: 138%; 
+    left: -20%;
+    right: 60%;
+    color: #fff;
+    text-align: justify;
+
+}
+
+.tid3{
+    position: absolute;
+    top: 335%; 
+    left: -20%;
+    right: 60%;
+    color: #fff;
+    text-align: justify;
+}
+
+.tid4{
+    position: absolute;
+    top: 530%; 
+    left: -20%;
+    right: 60%;
+    color: #fff;
+    text-align: justify;
+}
+
+.bullet-points{
+    position: absolute;
+    text-align: justify;
+    top: 96%;
+    left: 16%;
+    right: 55%;
+    
+}
+
+.bullet-points2{
+    text-align: justify;
+    position: absolute;
+    top: 155%;
+    left: 16%;
+    right: 55%;
+}
+
+.bullet-points3{
+    text-align: justify;
+    position: absolute;
+    top: 210%;
+    left: 16%;
+    right: 55%;
+}
+
+.blåboks{
+    width: 100%;  /* 30% of the width */
+    height: 1300px;
+    background-color: #095EAF;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 460px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.tallet1{
+    position: absolute;
+    width: 150px;
+    top:70%;
+    left: 2%;
+    
+}
+
+.schedule{
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    right: 8%;
+    top: 70%;
+}
+
+.tallet2{
+    position: absolute;
+    width: 150px;
+    top: 126%;
+    left: 2%;
+}
+
+.timer{
+    position: absolute;
+    width: 350px;
+    right: 10%;
+    top: 128%;
+
+}
+
+.tallet3{
+    position: absolute;
+    top: 181%;
+    left: 2%;
+    width: 150px;
+}
+
+.increase{
+    width: 300px;
+    position: absolute;
+    top: 188%;
+    left: 70%;
+}
+
+/* Herfra vil det være hvad der er relevant ift. min tips og guides subpage */
+
+/* .guideoverskrift1{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #095EAF;
+    font-size: 40px;
+}
+
+.guideoverskrift2{
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #095EAF;
+    font-size: 40px;
+}
+
+.guideoverskrift3{
+    position: absolute;
+    top: 90%;
+    right: 6%;
+    transform: translate(-50%, -50%);
+    color: #095EAF;
+    font-size: 40px;
+}
+
+.drumtuning{
+    width: 300px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.drumplaying{
+    width: 300px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    left:40%;
+    right: 45%;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.practise{
+    width: 300px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    border-radius: 15px;
+    right: 10%;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+} */
+
+
+.container{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    box-shadow: 0 10px 20px rgb(40, 40, 40);
+    border-radius: 15px;
+}
+
+.tune{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: black;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+.container:hover .overlay{
+    opacity: 0.8;
+}
+
+.container1{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    box-shadow: 0 10px 20px rgb(40, 40, 40);
+    border-radius: 15px;
+}
+
+.indspil{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.overlay1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: black;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.content1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+.container1:hover .overlay1{
+    opacity: 0.8;
+}
+
+.container2{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    box-shadow: 0 10px 20px rgb(40, 40, 40);
+    border-radius: 15px;
+}
+
+.practise{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.overlay2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: black;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.content2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+.container2:hover .overlay2{
+    opacity: 0.8;
+}
+
+.infobox{
+    width: 100%;
+    top: 100%;
+    position: absolute;
+    height: 410px;
+    background-color: #095EAF;
+}
+.infoboxoverskrift{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+.estepario{
+    width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.drumeo{
+    width: 300px;
+    position: absolute;
+    left: 40%;
+    top: 45%;
+}
+
+.robbrown{
+    width:300px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+
+.comments{
+    position: absolute;
+    left: 1%;
+    bottom: 15%;
+
+}
+
+.footerbox{
+    width: 100%;
+    position: absolute;
+    top: 155%;
+    background-color: #112E4A;
+    color: white;
+}
+
+.footerlogo{
+    width: 300px;
+    padding: 15px;
+
+}
+
+.overskrift1{
+    font-size: 23px;
+    color: #0B76DB;
+}
+
+.indspiltekst{
+    width: 100%;
+    position: absolute;
+    height: 500px;
+    top: 350px;
+    text-align: justify;
+    padding-right: 800px;
+    padding-left: 15px;
+    
+}
+
+.trommemikrofon{
+    width: 600px;
+    border-radius: 20px;
+    position: absolute;
+    right: 2%;
+    top: 0%;
+    box-shadow: 0 10px 20px rgb(40, 40, 40);
+}
+
+.overskrift2{
+    position: absolute;
+    top: 30%;
+}
+
+.tekst2{
+    padding-right: 800px;
+}
+
+.mitcover{
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    
+    right: 2%;
+    border-radius: 20px;
+    top: 472px;
+    
+}
+
+.bullet-pointsrecord{
+    text-align: justify;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    right: 53%;
+}
+
+.overskrift3{
+    position: absolute;
+    top: 95%;
+    color: #ffffff;
+}
+
+.footerboks1{
+    width: 100%;
+    margin-top: 1400px;
+
+    background-color: #112E4A;
+    color: white;
+}
+
+.tekstcover{
+    position: absolute;
+    top: 102%;
+    color: rgb(255, 255, 255);
+    padding-right: 800px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footerboks2{
+    width: 100%;
+    
+
+    background-color: #112E4A;
+    color: white;
+}
+
+.magisktrommer2{
+    margin-top: 330px;
+    height: 260px;
+    padding-top: 20px;
+    width: 100%;
+    padding-left: 10px;
+    background-color: #095EAF;
+    text-align: left;
+    color: #fff;
+    border: 2px ;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.blivblå{
+    color: #0B76DB;
+}
